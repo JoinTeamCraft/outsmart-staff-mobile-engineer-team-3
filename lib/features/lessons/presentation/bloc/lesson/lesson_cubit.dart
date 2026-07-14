@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -21,8 +19,6 @@ class LessonCubit extends Cubit<LessonState> {
     // TODO: Remove this after mock server is ready.
     await Future.delayed(const Duration(seconds: 1));
 
-    emit(Random().nextBool()
-        ? const LessonState.loaded()
-        : const LessonState.error('Something went wrong'));
+    emit(const LessonState.loaded());
   }
 }

@@ -38,5 +38,4 @@ If you receive a `No rule to make target` error, it is almost certainly because 
 | :--- | :--- |
 | `make pub-get` | Update packages |
 | `make watch` | Start code generation (Development) |
-| `make test` | Run tests |
 | `make full-clean` | Deep clean of project cache |

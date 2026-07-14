@@ -7,7 +7,7 @@ class StreakLearnApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: - Need make a desition about the routing pattern in the app.
+    // TODO: Decide on the app routing pattern.
     return MaterialApp(
       title: 'StreakLearn',
       theme: AppTheme.lightTheme,

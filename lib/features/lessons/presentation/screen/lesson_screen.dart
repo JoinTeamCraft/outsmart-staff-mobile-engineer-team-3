@@ -21,7 +21,7 @@ class LessonScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Lessons'), actions: [
         IconButton(
           icon: const Icon(Icons.refresh),
-          onPressed: context.read<LessonCubit>().fetch,
+          onPressed: () => context.read<LessonCubit>().fetch(),
         ),
       ]),
       body: BlocBuilder<LessonCubit, LessonState>(
