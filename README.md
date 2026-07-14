@@ -31,11 +31,28 @@ Run `flutter doctor` to confirm the toolchains for your target platform are set 
    ```bash
    flutter pub get
    ```
-2. List available devices:
+2.Generate Code (Required):
+This project uses freezed and build_runner. You must generate the necessary boilerplate code before running the application:
+
+# Using Makefile (Recommended)
+   ```bash
+   make gen
+   ```
+# Or manually
+   ```bash
+   dart run build_runner build --delete-conflicting-outputs
+   ```
+Note: If you are actively developing, use 
+   ```bash
+   make watch
+   ```
+to run the generator in the background.
+
+3. List available devices:
    ```bash
    flutter devices
    ```
-3. Run on a specific target:
+4. Run on a specific target:
    ```bash
    flutter run -d chrome   # web (fastest to start)
    flutter run -d macos    # macOS desktop

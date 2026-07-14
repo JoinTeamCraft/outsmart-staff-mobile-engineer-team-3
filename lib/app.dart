@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:streaklearn/features/lessons/presentation/screen/lesson_screen.dart';
 import 'core/theme/app_theme.dart';
 
 class StreakLearnApp extends StatelessWidget {
@@ -6,47 +7,16 @@ class StreakLearnApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: - Need make a desition about the routing pattern in the app.
     return MaterialApp(
       title: 'StreakLearn',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      initialRoute: '/',
+      initialRoute: '/lessons',
       routes: {
-        '/': (context) => const HomeScreenPlaceholder(),
+        '/lessons': (context) => LessonScreen.create(),
       },
-    );
-  }
-}
-
-class HomeScreenPlaceholder extends StatelessWidget {
-  const HomeScreenPlaceholder({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('StreakLearn')),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.school, size: 64, color: Colors.deepPurple),
-            SizedBox(height: 16),
-            Text(
-              'Welcome to StreakLearn Hackathon!',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 8),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 32),
-              child: Text(
-                'Tracks B, C, and D will replace this screen with the Lesson Feed, Lesson Detail/Quiz, and Streak Animation system.',
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
