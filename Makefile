@@ -21,6 +21,11 @@ watch:
 gen-clean:
 	dart run build_runner clean
 
+# --- Testing Commands ---
+# Run unit and widget tests
+test:
+	flutter test
+
 # --- Maintenance Commands ---
 # Perform a full project reset (clean flutter and build_runner caches)
 full-clean:

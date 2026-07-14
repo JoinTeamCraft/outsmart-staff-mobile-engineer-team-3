@@ -6,7 +6,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Set up service locator
-  setupLocator();
+  // setupLocator();
 
   runApp(const StreakLearnApp());
 }
