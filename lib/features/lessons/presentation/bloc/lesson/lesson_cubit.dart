@@ -9,9 +9,7 @@ part 'lesson_cubit.freezed.dart';
 /// {@endtemplate}
 class LessonCubit extends Cubit<LessonState> {
   /// {@macro lesson_cubit}
-  LessonCubit() : super(const LessonState.initial()) {
-    fetch();
-  }
+  LessonCubit() : super(const LessonState.initial());
 
   /// Fetches the list of lessons.
   Future<void> fetch() async {

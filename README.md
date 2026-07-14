@@ -32,21 +32,21 @@ Run `flutter doctor` to confirm the toolchains for your target platform are set 
    flutter pub get
    ```
 2. Generate Code (Required):
-This project uses freezed and build_runner. You must generate the necessary boilerplate code before running the application:
+   This project uses freezed and build_runner. You must generate the necessary boilerplate code before running the application:
 
-# Using Makefile (Recommended)
+   **Using Makefile (Recommended)**
    ```bash
    make gen
    ```
-# Or manually
+   **Or manually**
    ```bash
    dart run build_runner build --delete-conflicting-outputs
    ```
-Note: If you are actively developing, use 
+   Note: If you are actively developing, use 
    ```bash
    make watch
    ```
-to run the generator in the background.
+   to run the generator in the background.
 3. List available devices:
    ```bash
    flutter devices

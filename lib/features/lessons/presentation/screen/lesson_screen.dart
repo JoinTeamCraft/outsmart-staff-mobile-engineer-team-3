@@ -9,7 +9,7 @@ class LessonScreen extends StatelessWidget {
   /// Creates an instance of [LessonScreen] with all required dependencies.
   static Widget create({Key? key}) {
     return BlocProvider(
-      create: (context) => locator<LessonCubit>(),
+      create: (context) => locator<LessonCubit>()..fetch(),
       child: LessonScreen._(key: key),
     );
   }
