@@ -13,3 +13,4 @@ We rely on the following primary packages:
 Use watch mode during active development. It monitors file changes and automatically regenerates affected files.
 ```bash
 dart run build_runner watch --delete-conflicting-outputs
+```
