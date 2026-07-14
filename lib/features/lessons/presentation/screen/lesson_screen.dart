@@ -17,7 +17,7 @@ class LessonScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // TODO: Need make a decision about the localization of the app.
+      // TODO: Decide on the app localization strategy.
       appBar: AppBar(title: const Text('Lessons'), actions: [
         IconButton(
           icon: const Icon(Icons.refresh),
