@@ -37,5 +37,8 @@ If you receive a `No rule to make target` error, it is almost certainly because 
 | Command | Action |
 | :--- | :--- |
 | `make pub-get` | Update packages |
+| `make clean-build` | clean and update all packages |
+| `make get` | generate all requried code |
 | `make watch` | Start code generation (Development) |
+| `make gen-clean` | Clean all code generation |
 | `make full-clean` | Deep clean of project cache |
