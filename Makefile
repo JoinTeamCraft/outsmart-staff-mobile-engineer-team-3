@@ -27,3 +27,4 @@ full-clean:
 	flutter clean
 	dart run build_runner clean
 	flutter pub get
+	
