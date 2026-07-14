@@ -36,7 +36,6 @@ void main() {
   group('Quiz.fromJson', () {
     test('creates a quiz with typed immutable questions', () {
       final quiz = Quiz.fromJson({
-        'id': 'quiz-1',
         'lessonId': 'lesson-1',
         'questions': [
           {
@@ -48,7 +47,6 @@ void main() {
         ],
       });
 
-      expect(quiz.id, 'quiz-1');
       expect(quiz.lessonId, 'lesson-1');
       expect(quiz.questions.single, isA<Question>());
       expect(
@@ -67,7 +65,6 @@ void main() {
     test('throws FormatException for a malformed question', () {
       expect(
         () => Quiz.fromJson({
-          'id': 'quiz-1',
           'lessonId': 'lesson-1',
           'questions': ['not-an-object'],
         }),

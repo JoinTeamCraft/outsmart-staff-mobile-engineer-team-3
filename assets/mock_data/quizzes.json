@@ -1,6 +1,5 @@
 [
   {
-    "id": "quiz-1",
     "lessonId": "lesson-1",
     "questions": [
       {
@@ -18,7 +17,6 @@
     ]
   },
   {
-    "id": "quiz-2",
     "lessonId": "lesson-2",
     "questions": [
       {

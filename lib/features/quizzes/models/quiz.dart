@@ -2,7 +2,6 @@ import 'question.dart';
 
 class Quiz {
   Quiz({
-    required this.id,
     required this.lessonId,
     required List<Question> questions,
   }) : questions = List.unmodifiable(questions);
@@ -14,7 +13,6 @@ class Quiz {
     }
 
     return Quiz(
-      id: _requiredString(json, 'id'),
       lessonId: _requiredString(json, 'lessonId'),
       questions: questions.map((question) {
         if (question is! Map<String, dynamic>) {
@@ -27,7 +25,6 @@ class Quiz {
     );
   }
 
-  final String id;
   final String lessonId;
   final List<Question> questions;
 }

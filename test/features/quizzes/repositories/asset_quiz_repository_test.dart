@@ -14,7 +14,7 @@ void main() {
 
       expect(result, isA<DataSuccess<Quiz>>());
       final quiz = (result as DataSuccess<Quiz>).data;
-      expect(quiz.id, 'quiz-1');
+      expect(quiz.lessonId, 'lesson-1');
       expect(quiz.questions.single.prompt, 'What is Flutter built from?');
     });
 
@@ -31,7 +31,7 @@ void main() {
 
     test('returns ParsingFailure for malformed quiz data', () async {
       final repository = AssetQuizRepository(
-        _clientReturning('[{"id":"quiz-1"}]'),
+        _clientReturning('[{}]'),
       );
 
       final result = await repository.getQuizByLessonId('lesson-1');
@@ -69,7 +69,6 @@ const _quizzesJson = '[$_quizJson]';
 
 const _quizJson = '''
   {
-    "id": "quiz-1",
     "lessonId": "lesson-1",
     "questions": [
       {
