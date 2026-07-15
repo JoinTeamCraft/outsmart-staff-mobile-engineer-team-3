@@ -4,8 +4,8 @@ import '../../features/lessons/repositories/asset_lesson_repository.dart';
 import '../../features/lessons/repositories/lesson_repository.dart';
 import '../../features/lessons/presentation/bloc/lesson/lesson_cubit.dart';
 import '../../features/quiz/presentation/bloc/quiz/quiz_cubit.dart';
-import '../../features/quizzes/repositories/asset_quiz_repository.dart';
-import '../../features/quizzes/repositories/quiz_repository.dart';
+import '../../features/quiz/repositories/asset_quiz_repository.dart';
+import '../../features/quiz/repositories/quiz_repository.dart';
 import '../../features/streaks/presentation/bloc/streak/streak_cubit.dart';
 import '../network/api_client.dart';
 

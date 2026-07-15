@@ -3,8 +3,8 @@ import 'package:streaklearn/core/di/service_locator.dart';
 import 'package:streaklearn/core/network/api_client.dart';
 import 'package:streaklearn/features/lessons/repositories/asset_lesson_repository.dart';
 import 'package:streaklearn/features/lessons/repositories/lesson_repository.dart';
-import 'package:streaklearn/features/quizzes/repositories/asset_quiz_repository.dart';
-import 'package:streaklearn/features/quizzes/repositories/quiz_repository.dart';
+import 'package:streaklearn/features/quiz/repositories/asset_quiz_repository.dart';
+import 'package:streaklearn/features/quiz/repositories/quiz_repository.dart';
 
 void main() {
   tearDown(() => locator.reset());

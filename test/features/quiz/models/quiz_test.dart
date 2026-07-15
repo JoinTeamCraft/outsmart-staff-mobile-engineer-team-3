@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:streaklearn/features/quizzes/models/question.dart';
-import 'package:streaklearn/features/quizzes/models/quiz.dart';
+import 'package:streaklearn/features/quiz/models/question.dart';
+import 'package:streaklearn/features/quiz/models/quiz.dart';
 
 void main() {
   group('Question.fromJson', () {

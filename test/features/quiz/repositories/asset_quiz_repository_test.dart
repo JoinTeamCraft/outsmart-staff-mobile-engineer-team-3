@@ -2,8 +2,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:streaklearn/core/errors/app_failure.dart';
 import 'package:streaklearn/core/errors/data_result.dart';
 import 'package:streaklearn/core/network/api_client.dart';
-import 'package:streaklearn/features/quizzes/models/quiz.dart';
-import 'package:streaklearn/features/quizzes/repositories/asset_quiz_repository.dart';
+import 'package:streaklearn/features/quiz/models/quiz.dart';
+import 'package:streaklearn/features/quiz/repositories/asset_quiz_repository.dart';
 
 void main() {
   group('AssetQuizRepository', () {
