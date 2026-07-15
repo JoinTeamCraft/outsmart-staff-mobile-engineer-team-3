@@ -31,7 +31,7 @@ void main() {
 
     test('returns ParsingFailure for malformed quiz data', () async {
       final repository = AssetQuizRepository(
-        _clientReturning('[{}]'),
+        _clientReturning('[{"lessonId":"lesson-1"}]'),
       );
 
       final result = await repository.getQuizByLessonId('lesson-1');
@@ -40,6 +40,19 @@ void main() {
         (result as DataFailure<Quiz>).failure,
         isA<ParsingFailure>(),
       );
+    });
+
+    test('does not parse malformed details for an unrelated lesson', () async {
+      final repository = AssetQuizRepository(
+        _clientReturning(
+          '[{"lessonId":"lesson-2","questions":"invalid"},$_quizJson]',
+        ),
+      );
+
+      final result = await repository.getQuizByLessonId('lesson-1');
+
+      expect(result, isA<DataSuccess<Quiz>>());
+      expect((result as DataSuccess<Quiz>).data.lessonId, 'lesson-1');
     });
 
     test('returns ParsingFailure when a lesson has duplicate quizzes',

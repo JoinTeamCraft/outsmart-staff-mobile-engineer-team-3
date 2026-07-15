@@ -21,17 +21,17 @@ final class AssetQuizRepository implements QuizRepository {
         throw const FormatException('Expected a list of quizzes.');
       }
 
-      final matches = decoded
-          .map((item) {
-            if (item is! Map<String, dynamic>) {
-              throw const FormatException(
-                'Expected each quiz to be a JSON object.',
-              );
-            }
-            return Quiz.fromJson(item);
-          })
-          .where((quiz) => quiz.lessonId == lessonId)
-          .toList();
+      final matches = <Map<String, dynamic>>[];
+      for (final item in decoded) {
+        if (item is! Map<String, dynamic>) {
+          throw const FormatException(
+            'Expected each quiz to be a JSON object.',
+          );
+        }
+        if (item['lessonId'] == lessonId) {
+          matches.add(item);
+        }
+      }
 
       if (matches.isEmpty) {
         return DataFailure(
@@ -44,7 +44,7 @@ final class AssetQuizRepository implements QuizRepository {
         );
       }
 
-      return DataSuccess(matches.single);
+      return DataSuccess(Quiz.fromJson(matches.single));
     } catch (error, stackTrace) {
       return DataFailure(mapDataException(error, stackTrace));
     }
