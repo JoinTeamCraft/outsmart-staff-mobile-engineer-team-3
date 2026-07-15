@@ -10,8 +10,7 @@ class QuizState with _$QuizState {
   const factory QuizState.loading() = _Loading;
 
   /// The state when the quiz is successfully loaded.
-  // TODO: Add the Quiz entity.
-  const factory QuizState.loaded() = _Loaded;
+  const factory QuizState.loaded(Quiz quiz) = _Loaded;
 
   /// The state when an error occurs during the quiz session.
   ///
