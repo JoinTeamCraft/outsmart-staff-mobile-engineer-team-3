@@ -20,12 +20,18 @@ class LessonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // TODO: Decide on the app localization strategy.
-      appBar: AppBar(title: const Text('Lessons'), actions: [
-        IconButton(
-          icon: const Icon(Icons.refresh),
-          onPressed: () => context.read<LessonCubit>().fetch(),
+      appBar: AppBar(
+        title: const Text(
+          'Lesson',
+          style: TextStyle(fontWeight: FontWeight.w800),
         ),
-      ]),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: () => context.read<LessonCubit>().fetch(),
+          ),
+        ],
+      ),
       body: BlocBuilder<LessonCubit, LessonState>(
         builder: (context, state) => state.when(
           initial: () => const SizedBox.shrink(),
