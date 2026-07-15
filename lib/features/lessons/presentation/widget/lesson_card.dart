@@ -44,6 +44,7 @@ class LessonCard extends StatelessWidget {
         type: MaterialType.transparency,
         child: InkWell(
           borderRadius: BorderRadius.circular(_radius),
+          // TODO: Route to Lesson Detail/Quiz
           onTap: () {},
           child: ClipRRect(
             borderRadius: BorderRadius.circular(_radius),
