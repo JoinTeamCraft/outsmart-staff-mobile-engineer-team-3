@@ -39,3 +39,7 @@ migrate.json
 
 # Flutter internal
 .metadata
+
+# Code Generation
+*.g.dart
+*.freezed.dart
