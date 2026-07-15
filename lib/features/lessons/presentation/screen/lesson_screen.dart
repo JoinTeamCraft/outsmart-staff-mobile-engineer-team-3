@@ -28,7 +28,9 @@ class LessonScreen extends StatelessWidget {
         builder: (context, state) => state.when(
           initial: () => const SizedBox.shrink(),
           loading: () => const Center(child: CircularProgressIndicator()),
-          loaded: () => const Center(child: Text('Data was loaded')),
+          loaded: (lessons) => Center(
+            child: Text('${lessons.length} lessons loaded'),
+          ),
           error: (message) => Center(child: Text('Error: $message')),
         ),
       ),

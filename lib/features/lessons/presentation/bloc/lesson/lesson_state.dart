@@ -10,8 +10,7 @@ class LessonState with _$LessonState {
   const factory LessonState.loading() = _Loading;
 
   /// The state when the lesson data is successfully loaded.
-  // TODO: add the list of lessons entity.
-  const factory LessonState.loaded() = _Loaded;
+  const factory LessonState.loaded(List<Lesson> lessons) = _Loaded;
 
   /// The state when an error occurs.
   ///
