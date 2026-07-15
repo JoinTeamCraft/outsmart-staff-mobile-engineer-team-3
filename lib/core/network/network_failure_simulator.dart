@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'network_exception.dart';
 
+/// Injects configurable network failures for testing and local development.
 class NetworkFailureSimulator {
   NetworkFailureSimulator({
     this.failureRate = 0,

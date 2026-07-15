@@ -5,6 +5,7 @@ import 'network_failure_simulator.dart';
 
 typedef AssetLoader = Future<String> Function(String path);
 
+/// Loads mock API responses from bundled assets behind an async interface.
 class ApiClient {
   ApiClient({
     AssetLoader? assetLoader,

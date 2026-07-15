@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 
 import 'network_exception.dart';
 
+/// Executes requests and normalizes transport errors into [NetworkException].
 class NetworkExceptionHandler {
   const NetworkExceptionHandler({
     this.timeout = const Duration(seconds: 10),

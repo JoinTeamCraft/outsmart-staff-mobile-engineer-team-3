@@ -7,6 +7,7 @@ import '../../../core/network/api_client.dart';
 import '../models/quiz.dart';
 import 'quiz_repository.dart';
 
+/// Reads bundled quiz JSON and resolves the quiz for a requested lesson.
 final class AssetQuizRepository implements QuizRepository {
   const AssetQuizRepository(this._apiClient);
 

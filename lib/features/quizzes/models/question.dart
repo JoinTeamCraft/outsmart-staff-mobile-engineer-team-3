@@ -1,3 +1,4 @@
+/// Immutable quiz question with validated answer options.
 class Question {
   Question({
     required this.id,

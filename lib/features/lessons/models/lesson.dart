@@ -1,3 +1,4 @@
+/// Immutable learning content parsed from the lesson API contract.
 class Lesson {
   const Lesson({
     required this.id,

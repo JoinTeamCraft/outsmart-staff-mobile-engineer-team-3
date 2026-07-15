@@ -1,3 +1,4 @@
+/// A safe, UI-facing description of an error from the data layer.
 sealed class AppFailure {
   const AppFailure(
     this.message, {
@@ -10,6 +11,7 @@ sealed class AppFailure {
   final StackTrace? stackTrace;
 }
 
+/// Indicates that a request failed before a response could be obtained.
 final class NetworkFailure extends AppFailure {
   const NetworkFailure(
     super.message, {
@@ -18,6 +20,7 @@ final class NetworkFailure extends AppFailure {
   });
 }
 
+/// Indicates that bundled application data could not be loaded.
 final class AssetFailure extends AppFailure {
   const AssetFailure(
     super.message, {
@@ -26,6 +29,7 @@ final class AssetFailure extends AppFailure {
   });
 }
 
+/// Indicates that loaded data did not match the expected contract.
 final class ParsingFailure extends AppFailure {
   const ParsingFailure(
     super.message, {
@@ -34,6 +38,7 @@ final class ParsingFailure extends AppFailure {
   });
 }
 
+/// Indicates that the requested data does not exist.
 final class NotFoundFailure extends AppFailure {
   const NotFoundFailure(
     super.message, {
@@ -42,6 +47,7 @@ final class NotFoundFailure extends AppFailure {
   });
 }
 
+/// Indicates an unexpected data-layer error that could not be classified.
 final class UnknownFailure extends AppFailure {
   const UnknownFailure(
     super.message, {

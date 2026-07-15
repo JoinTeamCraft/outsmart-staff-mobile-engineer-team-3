@@ -6,6 +6,7 @@ import '../../../core/network/api_client.dart';
 import '../models/lesson.dart';
 import 'lesson_repository.dart';
 
+/// Reads bundled lesson JSON and maps it to typed repository results.
 final class AssetLessonRepository implements LessonRepository {
   const AssetLessonRepository(this._apiClient);
 

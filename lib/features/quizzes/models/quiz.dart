@@ -1,5 +1,6 @@
 import 'question.dart';
 
+/// Immutable collection of questions associated with a lesson.
 class Quiz {
   Quiz({
     required this.lessonId,
