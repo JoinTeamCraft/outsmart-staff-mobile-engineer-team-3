@@ -1,5 +1,8 @@
 /// List of available applicationpaddings.
 abstract class AppPaddings {
+  /// 4px.
+  static const double tiny = 4.0;
+
   /// 8px.
   static const double small = 8.0;
 
